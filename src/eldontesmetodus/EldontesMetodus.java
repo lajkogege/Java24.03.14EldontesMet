@@ -29,18 +29,15 @@ public class EldontesMetodus {
     private static boolean eldontesTetele(int[] tomb) {
        boolean van =false;
        int primszam=0;
-       for (int i = 0; i < tomb.length; i++) {
-            int szam = tomb[i];
-            int oszto = 1;
-            while (oszto < szam && !van) {
-                if (szam % oszto != 0) {
-                    van=true;
-                    System.out.println(tomb[i]);
-                }
-                oszto++;
+       int sozto=2;
+            for (int j = 0; j < tomb.length; j++) {
+               if(tomb[j]%sozto==0){
+                   van=false;
+                   System.out.print(tomb[j]);
+           }
             }
-        }
-        return van;
+    
+        return true;
     }
     
     private static void kiIratás(boolean van) {
